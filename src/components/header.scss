@@ -1,0 +1,172 @@
+@use "../base/variables" as *;
+
+.header {
+    background-color: $primary_color;
+    width: $max-width;
+    height: $max-height;
+    margin: 0;
+
+    &__icon {
+        width: 20%;
+        float: left;
+        position: relative;
+        top: 20px;
+        left: 15px;
+        img {
+            width: 30px;
+            height: 25px;
+        }
+    }
+
+    &__logo {
+        float: right;
+        width: 50%;
+        position: relative;
+        top: 15px;
+        right: 15px;
+        img {
+            width: $max-width;
+            height: 40px;
+        }
+    }
+
+    &__container {
+        //height: 100%;
+        //clear: both;
+        //background-color: lightgrey;
+        width: 90%;
+        //position: relative;
+        //top: 35px;
+    }
+
+    &__nav {
+        height: $max-height;
+    }
+
+    .nav__menu {
+        width: $max-width;
+        padding: 0;
+        margin-left: $smaller_margin;
+
+        &__item {
+            //display: block;
+            padding-top: 10px;
+
+            a:link, a:visited {
+                text-decoration: none;
+                color: $basic_black_color;
+                text-align: center;
+                font-size: $small_font_size;
+            }
+        }
+
+        li:last-child a {
+            border-right: 0;
+        }
+    }
+}
+
+.search {
+    &__container {
+        text-align: center;
+        height: 50px;
+        margin-left: $smaller_margin;
+    }
+
+    &__icon {
+        float: left;
+        width: 50px;
+        height: 50px;
+        padding-top: $small_padding;
+        padding-right: $small_padding;
+        background-color: $basic_white_color;
+    }
+
+    &__input {
+        float: left;
+        width: 80%;
+        height: 50px;
+        padding: $extra_small_padding;
+        border: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        background-color: $primary_color;
+        text-align: center;
+        height: 100px;
+        padding: $small_padding;
+
+        &__container {
+            width: $max-width;
+        }
+
+        &__icon {
+            display: none;
+        }
+
+        &__logo {
+            float: left;
+            height: $max-height;
+            width: 20%;
+
+            img {
+                width: 80%;
+                height: 50px;
+            }
+        }
+
+        &__nav {
+            float: left;
+            width: 60%;
+        }
+    }
+
+    .nav__menu {
+        width: $max-width;
+        line-height: 30px;
+        &__item {
+            display: inline-block;
+
+            a:link, a:visited {
+                border-right: solid 2px $basic_black_color;
+                text-decoration: none;
+                color: $basic_black_color;
+                padding: 0 $small_padding;
+                text-align: center;
+                font-size: $small_font_size;
+            }
+        }
+
+        li:last-child a {
+            border-right: 0;
+        }
+    }
+
+    .search {
+        &__container {
+            margin-top: $extra_small_margin;
+            margin-right: $extra_small_margin;
+            float: right;
+            background-color: $basic_white_color;
+            text-align: center;
+            height: 50px;
+            width: 200px;
+        }
+
+        &__icon {
+            float: right;
+            width: 40px;
+            height: 40px;
+            padding-top: $small_padding;
+            padding-right: $small_padding;
+        }
+
+        &__input {
+            width: 150px;
+            height: 50px;
+            border: none;
+        }
+    }
+}
