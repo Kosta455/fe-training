@@ -1,0 +1,144 @@
+.article__primary {
+    background-color: #E8E8E8;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 11px;
+    justify-items: flex-end;
+
+    .article__primary__img {
+        flex: 1;
+        order: 2;
+
+        img {
+            width: 100%;
+            height: 150px;
+            max-width: 250px;
+            object-fit: cover;
+        }
+    }
+
+    .article__primary__content {
+        flex: 1;
+        order: 1;
+
+        h2 {
+            color: orange;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        h3 {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+
+        p {
+            text-align: justify;
+        }
+    }
+
+    .article__primary__link {
+        order: 3;
+        width: 100%;
+        text-align: right;
+
+        a {
+            color: deepskyblue;
+        }
+    }
+    .flip {
+        text-align: left;
+    }
+}
+
+.flip {
+    flex-direction: row-reverse;
+}
+
+.article__secondary {
+        background-color: #E8E8E8;
+        display: flex;
+        flex-direction: column;
+        margin: 0 10px;
+        padding: 10px;
+        font-size: 11px;
+
+        h2 {
+            order: 1;
+            color: orange;
+            text-align: center;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        img {
+            width: 100%;
+            height: 150px;
+            max-width: 450px;
+            object-fit: cover;
+        }
+
+        p {
+            margin: 10px 0;
+            text-align: justify;
+        }
+
+        .article__secondary__img {
+            order: 2;
+        }
+
+        .article__secondary__img--flipped {
+            order: 3;
+        }
+
+        .article__secondary__p {
+            order: 3;
+        }
+
+        .article__secondary__p--flipped {
+            order: 2;
+        }
+    }
+
+@media (min-width: 768px) {
+    .article__primary {
+        flex: 1;
+        margin: 0;
+        font-size: 13px;
+
+        .article__primary__content {
+
+            h3 {
+                font-size: 14px;
+            }
+        }
+
+        .article__primary__link {
+            text-align: right;
+            align-self: flex-end;
+        }
+    }
+
+    .flip {
+        flex-direction: row;
+    }
+
+    .article__secondary {
+        flex: 1;
+        margin: 0;
+        font-size: 13px;
+
+        .article__secondary__img--flipped {
+            order: 2;
+        }
+
+        .article__secondary__p--flipped {
+            order: 3;
+        }
+    }
+}

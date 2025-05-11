@@ -1,0 +1,45 @@
+.aside {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .aside {
+        display: flex;
+        width: 20%;
+        justify-content: center;
+        align-items: flex-start;
+
+        .aside__nav {
+            width: 60%;
+        }
+
+        // potencijalno pitanje
+        .aside__menu {
+            background-color: #E0E0E0;
+            list-style-type: none;
+            padding: 1px;
+            border-radius: 10px;
+
+            .aside__menu__item {
+                background-color: gray;
+                padding: 10px;
+                margin: 9px 10px;
+                border-radius: 10px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 15px;
+                }
+
+                a:after {
+                    content: '\002B';
+                    color: white;
+                    float: right;
+                    font-size: 15px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
